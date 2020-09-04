@@ -14,7 +14,7 @@ public class BalancedBracketsTest {
     }
 
     @Test
-    public void bracketsWIthTextInTheMiddle() {
+    public void bracketsWithTextInTheMiddle() {
         assertTrue(BalancedBrackets.hasBalancedBrackets("[LaunchCode]"));
     }
 
@@ -35,23 +35,23 @@ public class BalancedBracketsTest {
 
     @Test
     public void openBracketAtTheBeginning() {
-        assertTrue(BalancedBrackets.hasBalancedBrackets("[LaunchCode"));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[LaunchCode"));
     }
 
     @Test
     public void textClosedBracketTextOpenBracket() {
-        assertTrue(BalancedBrackets.hasBalancedBrackets("Launch]Code["));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("Launch]Code["));
 
     }
 
     @Test
     public void openBracketNoClose() {
-        assertTrue(BalancedBrackets.hasBalancedBrackets("["));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("["));
     }
 
     @Test
     public void closeBracketOpenBracket() {
-        assertTrue(BalancedBrackets.hasBalancedBrackets("]["));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]["));
     }
 
     @Test
